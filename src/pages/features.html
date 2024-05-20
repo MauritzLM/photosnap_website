@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
-
-  Stories
-  Features
-  Pricing
-
-  Get an invite
+---
+title: 'Photosnap features'
+description: 'Features page'
+preloadImg: ''
+permalink: 'features/'
+eleventyNavigation:
+   key: features
+   order: 300
+layout: layouts/base.html
+stylesheet:  /css/features.css
+script:  ''
+---
 
   Features
 
@@ -51,18 +46,5 @@
   Easily drag and drop your image and get beautiful shots everytime. No over the top 
   tooling to add friction to creating stories.
 
-  We're in Beta. Get your invite today!
-  
-  Get an invite
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
-</body>
-</html>
+{# cta #}
+{% include "components/cta.html" %}

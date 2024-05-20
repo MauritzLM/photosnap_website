@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
-
-  Stories
-  Features
-  Pricing
-
-  Get an invite
+---
+title: 'Photosnap pricing'
+description: 'Pricing page'
+preloadImg: ''
+permalink: 'pricing/'
+eleventyNavigation:
+   key: pricing
+   order: 400
+layout: layouts/base.html
+stylesheet:  /css/pricing.css
+script:  /assets/js/pricing.js
+---
 
   Pricing
 
@@ -59,18 +54,5 @@
   Search Engine Indexing
   Custom Analytics
 
-  We're in Beta. Get your invite today!
-  
-  Get an invite
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
-</body>
-</html>
+  {# cta #}
+  {% include "components/cta.html" %}
