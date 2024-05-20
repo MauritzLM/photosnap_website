@@ -1,0 +1,35 @@
+<header id="cs-navigation">
+
+    {# logo here #}
+    <a href="/" aria-label="back to home">
+        <img src="/assets/images/shared/desktop/logo.svg" alt="logo" aria-hidden="true" decoding="async" width="" height="">
+    </a>
+
+    <!--Mobile Nav Toggle-->
+    <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1" aria-hidden="true"></span>
+            <span class="cs-line cs-line2" aria-hidden="true"></span>
+        </div>
+    </button>
+
+    <div class="nav-ul-wrapper">
+        <ul class="nav-ul">
+            {% set navPages = collections.all | eleventyNavigation %}
+            <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+            {% for entry in navPages %}
+
+                <li>
+                    <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+        <!-- invite button -->
+        <a href="/contact" class="cs-button">Get an invite</a>
+
+    </div>
+</nav>
+</header>
