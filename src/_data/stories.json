@@ -1,0 +1,172 @@
+[
+    {
+        "title": "Hazy full moon of Appalachia",
+        "author": "John Appleseed",
+        "date": "March 2nd 2020",
+        "featured": "true",
+        "text": "The dissected plateau area, while not actually made up of geological mountains, is popularly called 'mountains,' especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.",
+        "imgSrc": "moon-of-appalacia",
+        "imgAlt": "picture of a full moon",
+        "homePage": ""
+    },
+    {
+        "title": "The Mountains",
+        "author": "John Appleseed",
+        "date": "April 16th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "mountains",
+        "imgAlt": "picture of a mountain peak",
+        "homePage": "true"
+    },
+    {
+        "title": "Sunset Cityscapes",
+        "author": "Benjamin Cruz",
+        "date": "April 14th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "cityscapes",
+        "imgAlt": "picture of a city",
+        "homePage": "true"
+    },
+    {
+        "title": "18 Days Voyage",
+        "author": "Alexei Borodin",
+        "date": "April 11th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "18-days-voyage",
+        "imgAlt": "picture of a man walking at dusk",
+        "homePage": "true"
+    },
+    {
+        "title": "Architecturals",
+        "author": "Samantha Brooke",
+        "date": "April 9th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "architecturals",
+        "imgAlt": "picture showing a building",
+        "homePage": "true"
+    },
+    {
+        "title": "World Tour 2019",
+        "author": "Timothy Wagner",
+        "date": "April 7th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "world-tour",
+        "imgAlt": "picture of a mountain lake",
+        "homePage": ""
+    },
+    {
+        "title": "Unforeseen Corners",
+        "author": "William Malcolm",
+        "date": "April 3rd 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "unforeseen-corners",
+        "imgAlt": "picture of a sunset through tree",
+        "homePage": ""
+    },
+    {
+        "title": "King on Africa: Part II",
+        "author": "Tim Hillenburg",
+        "date": "March 29th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "king-on-africa",
+        "imgAlt": "picture of a male lion",
+        "homePage": ""
+    },
+    {
+        "title": "The Trip to Nowhere",
+        "author": "Felicia Rourke",
+        "date": "March 21st 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "trip-to-nowhere",
+        "imgAlt": "picture of a tree reflecting on lake",
+        "homePage": ""
+    },
+    {
+        "title": "Rage of The Sea",
+        "author": "Mohammed Abdul",
+        "date": "March 19th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "rage-of-the-sea",
+        "imgAlt": "picture of a sunset behind waves",
+        "homePage": ""
+    },
+    {
+        "title": "Running Free",
+        "author": "Michelle",
+        "date": "March 16th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "running-free",
+        "imgAlt": "picture showing horses running in dust cloud",
+        "homePage": ""
+    },
+    {
+        "title": "Behind the Waves",
+        "author": "Lamarr Wilson",
+        "date": "March 11th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "behind-the-waves",
+        "imgAlt": "picture of a large wave",
+        "homePage": ""
+    },
+    {
+        "title": "Calm Waters",
+        "author": "Samantha Brooke",
+        "date": "March 9th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "calm-waters",
+        "imgAlt": "picture of a mountain lake at dusk",
+        "homePage": ""
+    },
+    {
+        "title": "The Milky Way",
+        "author": "Benjamin Cruz",
+        "date": "March 5th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "milky-way",
+        "imgAlt": "picture of the milky way",
+        "homePage": ""
+    },
+    {
+        "title": "Night at The Dark Forest",
+        "author": "Mohammed Abdul",
+        "date": "March 4th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "dark-forest",
+        "imgAlt": "picture of a forest below a snowy mountain",
+        "homePage": ""
+    },
+    {
+        "title": "Somwarpet’s Beauty",
+        "author": "Michelle",
+        "date": "March 1st 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "somwarpet",
+        "imgAlt": "picture of yellow flowers",
+        "homePage": ""
+    },
+    {
+        "title": "Land of Dreams",
+        "author": "William Malcolm",
+        "date": "February 25th 2020",
+        "featured": "",
+        "text": "",
+        "imgSrc": "land-of-dreams",
+        "imgAlt": "picture of a small church among cloudy and snowy mountains",
+        "homePage": ""
+    }
+]
