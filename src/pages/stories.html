@@ -10,100 +10,53 @@ layout: layouts/base.html
 stylesheet:  /css/stories.css
 script:  ''
 ---
+
 {# for each story create a component* #}
-  Last month's featured story
+  
 
-  Hazy full moon of Appalachia
-  March 2nd 2020
-  by John Appleseed
+  
+<section id="stories">  
+<!-- loop over stories -->
+  {% for story in stories %}
 
-  The dissected plateau area, while not actually made up of geological mountains, 
-  is popularly called "mountains," especially in eastern Kentucky and West Virginia, 
-  and while the ridges are not high, the terrain is extremely rugged.
+    <!-- featured story -->
+     {% if story.featured %}
 
-  Read the story
+     <picture>
+          <!-- Mobile image-->
+          <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
+          <!-- tablet image* -->
+          
+          <!-- Desktop image -->
+          <source media="(min-width: 601px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
 
-  April 16th 2020
-  The Mountains
-  by John Appleseed
-  Read Story
+          <!-- Fallback image --> 
+          <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
+      </picture>
 
-  April 14th 2020
-  Sunset Cityscapes
-  by Benjamin Cruz
-  Read Story
+       <p>Last month's featured story</p>
 
-  April 11th 2020
-  18 Days Voyage
-  by Alexei Borodin
-  Read Story
+       <h3>{{ story.title }}</h3>
+       <p>{{ story.date }}</p>
+       <p>{{ story.text }}</p>
 
-  April 9th 2020
-  Architecturals
-  by Samantha Brooke
-  Read Story
+    <!-- non featured stories -->
+     {% else %}
 
-  April 7th 2020
-  World Tour 2019
-  by Timothy Wagner
-  Read Story
+      <picture>
+          <!-- Mobile image-->
+          <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
+          <!-- Desktop image -->
+          <source media="(min-width: 601px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
 
-  April 7th 2020
-  World Tour 2019
-  by Timothy Wagner
-  Read Story
+          <!-- Fallback image --> 
+          <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
+      </picture>         
+    
+       <h3>{{ story.title }}</h3>
+       <p>{{ story.date }}</p>
+      
+     {% endif %}
 
-  April 3rd 2020
-  Unforeseen Corners
-  by William Malcolm
-  Read Story
-
-  March 29th 2020
-  King on Africa: Part II
-  by Tim Hillenburg
-  Read Story
-
-  March 21st 2020
-  The Trip to Nowhere
-  by Felicia Rourke
-  Read Story
-
-  March 19th 2020
-  Rage of The Sea
-  by Mohammed Abdul
-  Read Story
-
-  March 16th 2020
-  Running Free
-  by Michelle
-  Read Story
-
-  March 11th 2020
-  Behind the Waves
-  by Lamarr Wilson
-  Read Story
-
-  March 9th 2020
-  Calm Waters
-  by Samantha Brooke
-  Read Story
-
-  March 5th 2020
-  The Milky Way
-  by Benjamin Cruz
-  Read Story
-
-  March 4th 2020
-  Night at The Dark Forest
-  by  Mohammed Abdul
-  Read Story
-
-  March 1st 2020
-  Somwarpet’s Beauty
-  by Michelle
-  Read Story
-
-  February 25th 2020
-  Land of Dreams
-  by William Malcolm
-  Read Story
+  {% endfor %}
+</section>  
