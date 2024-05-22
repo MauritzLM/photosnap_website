@@ -11,48 +11,141 @@ stylesheet:  /css/pricing.css
 script:  /assets/js/pricing.js
 ---
 
-  Pricing
+<section id="hero">
+   
+   <picture>
+         <!-- Mobile image -->
+          <source media="(max-width: 700px)" srcset="/assets/images/pricing/mobile/hero.jpg"/>
+         <!-- Tablet image* -->
 
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
-  It’s the simple way to create and share your photos.
+         <!-- Desktop image --> 
+          <source media="(min-width: 701px)" srcset="/assets/images/pricing/desktop/hero.jpg"/>
+         <!-- Fallback image -->
+          <img src="/assets/images/pricing/desktop/hero.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
+    </picture>
 
+  <div class="cs-text">
+    <h1>Pricing</h1>
+
+    <p>Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
+     It’s the simple way to create and share your photos.</p>
+   </div>
+</section>
+
+<section id="pricing-options">
+  {# toggle* #}
+
+  <div>
   Monthly
   Yearly
+  </div>
 
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
-  $190.00 per year
-  Pick Plan
+  <div class="wrapper">
 
-  Pro
-  More advanced features available. Recommended for photography veterans and professionals.
-  $39.00 per month
-  $390.00 per year
-  Pick Plan
+     <div class="option">
+        <h3>Basic</h3>
+        <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
+        <span class="price">$19.00</span>
+        <span class="interval">per Month</span>
 
-  Business
-  Additional features available such as more detailed metrics. Recommended for business owners.
-  $99.00 per month
-  $990.00 per year
-  Pick Plan
+        <a href="#">Pick Plan</a>
 
-  Compare
+     </div>
 
-  The Features
+     <div class="option">
+        <h3>Pro</h3>
+        <p>More advanced features available. Recommended for photography veterans and professionals.</p>
+        <span class="price">$39.00</span>
+        <span class="interval">per Month</span>
 
-  Basic
-  Pro
-  Business
+        <a href="#">Pick Plan</a>
 
-  Unlimited Story Posting
-  Unlimited Photo Upload
-  Embedding Custom Content
-  Customize Metadata
-  Advanced Metrics
-  Photo Downloads
-  Search Engine Indexing
-  Custom Analytics
+     </div>
+
+     <div class="option">
+        <h3>Business</h3>
+        <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
+        <span class="price">$99.00</span>
+        <span class="interval">per Month</span>
+
+        <a href="#">Pick Plan</a>
+
+     </div>
+
+  </div>
+</section>
+
+<section id="compare">
+
+  <table>
+    <caption>Compare</caption>
+   
+    <thead>
+      <th scope="col">The Features</th>
+      <th scope="col">Basic</th>
+      <th scope="col">Pro</th>
+      <th scope="col">Business</th>
+    </thead>
+    <tbody>
+       <tr>
+         <th>Unlimited Story Posting</th>
+         <td class="check"></td>
+         <td class="check"></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Unlimited Photo Upload</th>
+         <td class="check"></td>
+         <td class="check"></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Embedding Custom Content</th>
+         <td></td>
+         <td class="check"></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Customize Metadata</th>
+         <td></td>
+         <td class="check"></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Advanced Metrics</th>
+         <td></td>
+         <td></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Photo Downloads</th>
+         <td></td>
+         <td></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Search Engine Indexing</th>
+         <td></td>
+         <td></td>
+         <td class="check"></td>
+       </tr>
+
+        <tr>
+         <th>Custom Analytics</th>
+         <td></td>
+         <td></td>
+         <td class="check"></td>
+       </tr>
+
+    </tbody>
+  </table>
+</section>  
 
   {# cta #}
   {% include "components/cta.html" %}
