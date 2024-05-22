@@ -13,8 +13,6 @@ eleventyNavigation:
 
 <!-- HERO SECTION -->
 <section id="hero">
-   
-   
    <picture>
          <!-- Mobile image -->
           <source media="(max-width: 700px)" srcset="/assets/images/home/mobile/create-and-share.jpg"/>
@@ -26,10 +24,13 @@ eleventyNavigation:
           <img src="/assets/images/home/desktop/create-and-share.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
    </picture>
 
-  <h1>Create and share your photo Stories</h1>
+   <div class="cs-text">
+       <h1>Create and share your photo Stories</h1>
 
-  <p>Photosnap is a platform for photographers and visual storytellers. We make it 
-  easy to share photos, tell stories and connect with others.</p>
+       <p>Photosnap is a platform for photographers and visual storytellers. We make it 
+        easy to share photos, tell stories and connect with others.</p>
+
+  </div>
 </section>
 
 <section id="sbs-r">
@@ -45,14 +46,15 @@ eleventyNavigation:
          <!-- Fallback image -->
           <img src="/assets/images/home/desktop/beautiful-stories.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="" height="" loading="lazy"/> 
    </picture>
+  <div class="cs-text">
+      <h2>Beautiful stories every time</h2>
   
-  <h2>Beautiful stories every time</h2>
-  
-  <p>We provide design templates to ensure your stories look terrific. Easily add 
-  photos, text, embed maps and media from other networks. Then share your story 
-  with everyone.</p>
+      <p>We provide design templates to ensure your stories look terrific. Easily add 
+       photos, text, embed maps and media from other networks. Then share your story 
+       with everyone.</p>
 
-  <a href="#">View the stories</a>
+      <a href="#">View the stories</a>
+  </div>
 </section>
 
 <section id="sbs-l">
@@ -69,20 +71,22 @@ eleventyNavigation:
           <img src="/assets/images/home/desktop/designed-for-everyone.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="" height="" loading="lazy"/> 
    </picture>
 
-  <h2>Designed for everyone</h2>
+  <div class="cs-text">
+      <h2>Designed for everyone</h2>
 
-  <p>Photosnap can help you create stories that resonate with your audience.  Our 
-  tool is designed for photographers of all levels, brands, businesses you name it.</p> 
+      <p>Photosnap can help you create stories that resonate with your audience.  Our 
+      tool is designed for photographers of all levels, brands, businesses you name it.</p> 
 
-  <a href="#">View the stories</a>
+      <a href="#">View the stories</a>
+  </div>
 </section>  
 
 <section id="stories">
 
   {# 4 most recent stories* #}
   {# on sorted array (by date) #}
-  {% for story in stories.slice(0, 4) %}
-
+  {% for story in stories.slice(1, 5) %}
+    <a href="#" class="story">
       {# picture* #}
       <picture>
          <!-- Mobile image -->
@@ -94,12 +98,16 @@ eleventyNavigation:
          <!-- Fallback image -->
           <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="" height="" loading="lazy"/> 
      </picture> 
+     
+     <div class="cs-text">
+        <h3>{{ story.title }}</h3>
+        <p>by {{ story.author }}</p>
 
-      <h3>{{ story.title }}</h3>
-      <p>by {{ story.author }}</p>
-
+        <span>Read story</span>
+     </div> 
+    </a>
    {% endfor %}   
-
+  
 </section>
 
 <section id="features">
