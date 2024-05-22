@@ -17,7 +17,7 @@
         <ul class="nav-ul">
             {% set navPages = collections.all | eleventyNavigation %}
             <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
-            {% for entry in navPages %}
+            {% for entry in navPages.slice(1) %}
 
                 <li>
                     <a href="{{entry.url}}" class="{% if entry.url == page.url %} cs-active {% endif %}">{{entry.key}}</a>
