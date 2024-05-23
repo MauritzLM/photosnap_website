@@ -1,1 +1,50 @@
 /* STYLES FOR THE FEATURES PAGE */
+
+/* HERO SECTION*/
+#hero {
+
+    display: flex;
+    flex-direction: column;
+
+    picture {
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    .cs-text {
+        background-color: var(--bgColorDark);
+        color: var(--textColorLight);
+        padding: 4em 28px;
+        position: relative;
+
+        p {
+            color: var(--grey-500);
+        }
+    }
+}
+
+/* FEATURES SECTION */
+#features {
+    padding: 4em 28px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+
+        .feature {
+            text-align: center;
+
+            img {
+                margin-bottom: 30px;
+            }
+
+            p {
+                color: var(--grey-500);
+            }
+        }
+    }
+}
