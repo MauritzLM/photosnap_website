@@ -1,1 +1,155 @@
 /* STYLES FOR THE PRICING PAGE */
+
+/* HERO SECTION */
+#hero {
+
+    display: flex;
+    flex-direction: column;
+
+    picture {
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    .cs-text {
+        background-color: var(--bgColorDark);
+        color: var(--textColorLight);
+        padding: 4em 28px;
+        position: relative;
+
+        p {
+            color: var(--grey-500);
+        }
+    }
+}
+
+/* PRICING OPTIONS SECTION */
+/* toggle */
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    align-items: center;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: var(--grey-200);
+    border-radius: 16px;
+    width: 64px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+
+    &:before,
+    &:after {
+        content: "";
+    }
+
+    &:before {
+        display: block;
+        background: var(--bgColorDark);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        transition: left 0.25s;
+    }
+
+    .toggle:hover &:before {
+        background: var(--bgColorLight);
+    }
+
+    .toggle-checkbox:checked+& {
+        background: var(--grey-200);
+
+        &:before {
+            left: 35px;
+        }
+    }
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+#pricing-options {
+    padding: 4em 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .option {
+            background-color: var(--grey-100);
+            padding: 36px 18px;
+            text-align: center;
+            max-width: 350px;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .interval,
+            p {
+                color: var(--grey-500);
+            }
+
+            .price {
+                display: block;
+                font-size: 40px;
+                font-weight: 700;
+                margin-top: 40px;
+                margin-bottom: 10px;
+            }
+
+            .cs-button {
+                display: block;
+                text-align: center;
+                margin: auto;
+                margin-top: 40px;
+                width: 245px;
+            }
+
+            &:nth-of-type(2) {
+                background-color: var(--bgColorDark);
+                color: var(--textColorLight);
+                position: relative;
+
+                .color-box {
+                    width: 100%;
+                    left: 0;
+                }
+
+                .cs-button {
+                    background-color: var(--bgColorLight);
+                    color: var(--textColorDark);
+                }
+            }
+
+
+        }
+    }
+}
+
+/* COMPARISON TABLE SECTION */
