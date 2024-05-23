@@ -15,34 +15,49 @@ script:  ''
   
 
   
-<section id="stories">  
+<section id="hero">  
 <!-- loop over stories -->
   {% for story in stories %}
 
     <!-- featured story -->
      {% if story.featured %}
 
-     <picture>
-          <!-- Mobile image-->
-          <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
-          <!-- tablet image* -->
+     <div class="featured">
+
+        <picture>
+             <!-- Mobile image-->
+             <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
+             <!-- tablet image* -->
           
-          <!-- Desktop image -->
-          <source media="(min-width: 601px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
+             <!-- Desktop image -->
+             <source media="(min-width: 601px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
 
-          <!-- Fallback image --> 
-          <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
-      </picture>
+             <!-- Fallback image --> 
+             <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
+         </picture>
+ 
+         <div class="cs-text">   
+             <p>Last month's featured story</p>
 
-       <p>Last month's featured story</p>
+             <h1>{{ story.title }}</h1>
+             <p>{{ story.date }} <span>by {{ story.author }}</span></p>
+             <p>{{ story.text }}</p>
 
-       <h3>{{ story.title }}</h3>
-       <p>{{ story.date }}</p>
-       <p>{{ story.text }}</p>
+             <span class="arrow-link">Read story <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></span>
+         </div>    
+      </div> 
+     
+     {% endif %}
 
-    <!-- non featured stories -->
-     {% else %}
+  {% endfor %}
+</section>
 
+<section id="stories">
+
+{% for story in stories %}
+   
+   {% if story.featured == '' %}
+    <div class="non-featured">
       <picture>
           <!-- Mobile image-->
           <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
@@ -52,11 +67,19 @@ script:  ''
           <!-- Fallback image --> 
           <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
       </picture>         
-    
-       <h3>{{ story.title }}</h3>
-       <p>{{ story.date }}</p>
       
-     {% endif %}
+      <div class="cs-text">
+          <p>{{ story.date }}</p>
+          <h3>{{ story.title }}</h3>
+          <p>by {{ story.author }}</p>
 
-  {% endfor %}
-</section>  
+          <span class="arrow-link">Read story <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></span>
+      </div>
+
+    </div> 
+
+   {% endif %}
+
+{% endfor %}
+
+</section>
