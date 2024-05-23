@@ -21,14 +21,17 @@ eleventyNavigation:
          <!-- Desktop image --> 
           <source media="(min-width: 701px)" srcset="/assets/images/home/desktop/create-and-share.jpg"/>
          <!-- Fallback image -->
-          <img src="/assets/images/home/desktop/create-and-share.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
+          <img src="/assets/images/home/desktop/create-and-share.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="" height="" loading="eager"/> 
    </picture>
 
    <div class="cs-text">
-       <h1>Create and share your photo Stories</h1>
+       <div class="color-box"></div>
+       <h1>Create and share your photo Stories.</h1>
 
        <p>Photosnap is a platform for photographers and visual storytellers. We make it 
         easy to share photos, tell stories and connect with others.</p>
+
+        <a class="arrow-link" href="#">Get an invite <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></a>
 
   </div>
 </section>
@@ -53,7 +56,7 @@ eleventyNavigation:
        photos, text, embed maps and media from other networks. Then share your story 
        with everyone.</p>
 
-      <a href="#">View the stories</a>
+      <a class="arrow-link" href="#">View the stories <img src="/assets/images/shared/desktop/arrow-dark.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></a>
   </div>
 </section>
 
@@ -77,7 +80,7 @@ eleventyNavigation:
       <p>Photosnap can help you create stories that resonate with your audience.  Our 
       tool is designed for photographers of all levels, brands, businesses you name it.</p> 
 
-      <a href="#">View the stories</a>
+      <a class="arrow-link" href="#">View the stories <img src="/assets/images/shared/desktop/arrow-dark.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></a>
   </div>
 </section>  
 
@@ -103,7 +106,7 @@ eleventyNavigation:
         <h3>{{ story.title }}</h3>
         <p>by {{ story.author }}</p>
 
-        <span>Read story</span>
+        <span class="arrow-link">Read story <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></span>
      </div> 
     </a>
    {% endfor %}   
