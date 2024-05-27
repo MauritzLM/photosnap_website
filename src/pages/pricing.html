@@ -16,11 +16,12 @@ script:  /assets/js/pricing.js
    
    <picture>
          <!-- Mobile image -->
-          <source media="(max-width: 700px)" srcset="/assets/images/pricing/mobile/hero.jpg"/>
+          <source media="(max-width: 767px)" srcset="/assets/images/pricing/mobile/hero.jpg"/>
          <!-- Tablet image* -->
+         <source media="(max-width: 1099px)" srcset="/assets/images/pricing/tablet/hero.jpg"/>
 
          <!-- Desktop image --> 
-          <source media="(min-width: 701px)" srcset="/assets/images/pricing/desktop/hero.jpg"/>
+          <source media="(min-width: 1100px)" srcset="/assets/images/pricing/desktop/hero.jpg"/>
          <!-- Fallback image -->
           <img src="/assets/images/pricing/desktop/hero.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
     </picture>
@@ -39,12 +40,12 @@ script:  /assets/js/pricing.js
 
   <div class="toggle-container">
      <label class="toggle">
-        <span class="toggle-label">Monthly</span>
+        <span class="toggle-label monthly cs-active">Monthly</span>
 
 	      <input class="toggle-checkbox" type="checkbox">
 	      <div class="toggle-switch"></div>
 
-	      <span class="toggle-label">Yearly</span>
+	      <span class="toggle-label yearly">Yearly</span>
      </label>
   </div>
 
@@ -53,8 +54,11 @@ script:  /assets/js/pricing.js
      <div class="option">
         <h3>Basic</h3>
         <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
-        <span class="price">$19.00</span>
-        <span class="interval">per Month</span>
+
+        <div class="price-wrapper">
+           <span class="price">$19.00</span>
+           <span class="interval">per month</span>
+        </div>
 
         <a class="cs-button" href="#">Pick Plan</a>
 
@@ -64,8 +68,11 @@ script:  /assets/js/pricing.js
         <div class="color-box"></div>
         <h3>Pro</h3>
         <p>More advanced features available. Recommended for photography veterans and professionals.</p>
-        <span class="price">$39.00</span>
-        <span class="interval">per Month</span>
+
+        <div class="price-wrapper">
+           <span class="price">$39.00</span>
+           <span class="interval">per month</span>
+        </div>
 
         <a class="cs-button" href="#">Pick Plan</a>
 
@@ -74,8 +81,11 @@ script:  /assets/js/pricing.js
      <div class="option">
         <h3>Business</h3>
         <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
-        <span class="price">$99.00</span>
-        <span class="interval">per Month</span>
+
+        <div class="price-wrapper">
+           <span class="price">$99.00</span>
+           <span class="interval">per month</span>
+        </div>
 
         <a class="cs-button" href="#">Pick Plan</a>
 
@@ -90,63 +100,65 @@ script:  /assets/js/pricing.js
     <caption>Compare</caption>
    
     <thead>
-      <th scope="col">The Features</th>
-      <th scope="col">Basic</th>
-      <th scope="col">Pro</th>
-      <th scope="col">Business</th>
+      <tr>
+         <th scope="col">The Features</th>
+         <th scope="col">Basic</th>
+         <th scope="col">Pro</th>
+         <th scope="col">Business</th>
+      </tr>
     </thead>
     <tbody>
        <tr>
-         <th>Unlimited Story Posting</th>
+         <th scope="row">Unlimited Story Posting</th>
          <td class="check"></td>
          <td class="check"></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Unlimited Photo Upload</th>
+         <th scope="row">Unlimited Photo Upload</th>
          <td class="check"></td>
          <td class="check"></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Embedding Custom Content</th>
+         <th scope="row">Embedding Custom Content</th>
          <td></td>
          <td class="check"></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Customize Metadata</th>
+         <th scope="row">Customize Metadata</th>
          <td></td>
          <td class="check"></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Advanced Metrics</th>
+         <th scope="row">Advanced Metrics</th>
          <td></td>
          <td></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Photo Downloads</th>
+         <th scope="row">Photo Downloads</th>
          <td></td>
          <td></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Search Engine Indexing</th>
+         <th scope="row">Search Engine Indexing</th>
          <td></td>
          <td></td>
          <td class="check"></td>
        </tr>
 
         <tr>
-         <th>Custom Analytics</th>
+         <th scope="row">Custom Analytics</th>
          <td></td>
          <td></td>
          <td class="check"></td>

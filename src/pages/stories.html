@@ -19,18 +19,19 @@ script:  ''
 <!-- loop over stories -->
   {% for story in stories %}
 
-    <!-- featured story -->
+    
      {% if story.featured %}
-
+      <!-- featured story -->
      <div class="featured">
 
         <picture>
              <!-- Mobile image-->
-             <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
+             <source media="(max-width: 767px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
              <!-- tablet image* -->
+             <source media="(max-width: 1339px)" srcset="/assets/images/stories/tablet/{{ story.imgSrc }}.jpg"/>
           
              <!-- Desktop image -->
-             <source media="(min-width: 601px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
+             <source media="(min-width: 1440px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
 
              <!-- Fallback image --> 
              <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 

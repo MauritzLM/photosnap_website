@@ -15,13 +15,14 @@ script:  ''
 
     <picture>
          <!-- Mobile image -->
-          <source media="(max-width: 700px)" srcset="/assets/images/features/mobile/hero.jpg"/>
+          <source media="(max-width: 767px)" srcset="/assets/images/features/mobile/hero.jpg"/>
          <!-- Tablet image* -->
+         <source media="(max-width: 1099px)" srcset="/assets/images/features/tablet/hero.jpg"/>
 
          <!-- Desktop image --> 
-          <source media="(min-width: 701px)" srcset="/assets/images/features/desktop/hero.jpg"/>
+          <source media="(min-width: 1100px)" srcset="/assets/images/features/desktop/hero.jpg"/>
          <!-- Fallback image -->
-          <img src="/assets/images/features/desktop/hero.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"/> 
+          <img src="/assets/images/features/desktop/hero.jpg" alt="man looking over misty lake" aria-hidden="true" decoding="async" width="" height="" loading="eager"/> 
     </picture>
 
     <div class="cs-text">
@@ -39,7 +40,9 @@ script:  ''
 
    <div class="feature">
        <!-- svg -->
-    <img src="/assets/images/features/desktop/responsive.svg" alt="" height="" width="72px" aria-hidden="true"/>
+       <div>
+         <img src="/assets/images/features/desktop/responsive.svg" alt="" height="72px" width="" aria-hidden="true"/>
+      </div>
       <h3>100% Responsive</h3>
       <p>No matter which the device you’re on, our site is fully responsive and stories 
          look beautiful on any screen.</p>
@@ -47,7 +50,9 @@ script:  ''
 
    <div class="feature">
        <!-- svg -->
-    <img src="/assets/images/features/desktop/no-limit.svg" alt="" height="" width="72px" aria-hidden="true"/>
+       <div>
+          <img src="/assets/images/features/desktop/no-limit.svg" alt="" height="" width="72px" aria-hidden="true"/>
+       </div>   
       <h3>No Photo Upload Limit</h3>
       <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share 
          all of your stories in one go.</p>
@@ -55,7 +60,9 @@ script:  ''
 
    <div class="feature">
        <!-- svg -->
-    <img src="/assets/images/features/desktop/embed.svg" alt="" height="" width="72px" aria-hidden="true"/>
+      <div>
+         <img src="/assets/images/features/desktop/embed.svg" alt="" height="72px" width="" aria-hidden="true"/>
+      </div>
       <h3>Available to Embed</h3>
       <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google 
          Maps, and more.</p>
@@ -63,7 +70,9 @@ script:  ''
 
    <div class="feature">
        <!-- svg -->
-    <img src="/assets/images/features/desktop/custom-domain.svg" alt="" height="" width="72px" aria-hidden="true"/>
+       <div>
+         <img src="/assets/images/features/desktop/custom-domain.svg" alt="" height="72px" width="" aria-hidden="true"/>
+      </div>
       <h3>Custom Domain</h3>
       <p>With Photosnap subscriptions you can host your stories on your own domain. You can 
          also remove our branding!</p>
@@ -71,7 +80,9 @@ script:  ''
 
    <div class="feature">
        <!-- svg -->
-    <img src="/assets/images/features/desktop/boost-exposure.svg" alt="" height="" width="72px" aria-hidden="true"/>
+      <div>
+         <img src="/assets/images/features/desktop/boost-exposure.svg" alt="" height="72px" width="" aria-hidden="true"/>
+      </div>
       <h3>Boost Your Exposure</h3>
       <p>Users that viewed your story or gallery can easily get notifed of new and featured 
          stories with our built in mailing list.</p>
@@ -79,7 +90,9 @@ script:  ''
 
    <div class="feature">
        <!-- svg -->
-    <img src="/assets/images/features/desktop/drag-drop.svg" alt="" height="" width="72px" aria-hidden="true"/>
+      <div>
+         <img src="/assets/images/features/desktop/drag-drop.svg" alt="" height="72px" width="" aria-hidden="true"/>
+      </div>
       <h3>Drag & Drop Image</h3>
       <p> Easily drag and drop your image and get beautiful shots everytime. No over the top 
           tooling to add friction to creating stories.</p>
