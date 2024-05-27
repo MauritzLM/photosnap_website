@@ -26,6 +26,45 @@
     }
 }
 
+/* tablet styles */
+@media screen and (min-width: 768px) {
+    #hero {
+        flex-direction: row;
+        height: 490px;
+
+        picture {
+            width: 100%;
+            order: 1;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .cs-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px;
+            max-width: 610px;
+
+            .color-box {
+                width: 6px;
+                height: 144px;
+                left: 0;
+                top: 173px;
+                transform: rotate(0.5turn);
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 40px;
+            }
+        }
+    }
+
+}
+
 /* PRICING OPTIONS SECTION */
 /* toggle */
 .toggle {
@@ -36,6 +75,23 @@
     justify-content: center;
     gap: 18px;
     align-items: center;
+
+    .toggle-label {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--grey-500);
+
+    }
+
+    .toggle-checkbox {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    // selected option
+    .cs-active {
+        color: var(--textColorDark);
+    }
 }
 
 .toggle-switch {
@@ -76,24 +132,15 @@
             left: 35px;
         }
     }
-}
-
-.toggle-checkbox {
-    position: absolute;
-    visibility: hidden;
-}
-
-.toggle-label {
-    font-size: 18px;
-    font-weight: 700;
 
 }
+
 
 #pricing-options {
     padding: 4em 28px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 50px;
 
     .wrapper {
         display: flex;
@@ -122,6 +169,7 @@
                 font-weight: 700;
                 margin-top: 40px;
                 margin-bottom: 10px;
+                letter-spacing: 4.17px;
             }
 
             .cs-button {
@@ -153,12 +201,79 @@
     }
 }
 
+/* tablet styles */
+@media screen and (min-width: 768px) {
+    #pricing-options {
+        padding-top: 100px;
+
+        .wrapper {
+            .option {
+                width: 689px;
+                max-width: none;
+                height: 270px;
+                padding: 40px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "heading price"
+                    "text price"
+                    "button .";
+                row-gap: 10px;
+
+                &:nth-of-type(2) {
+                    .color-box {
+                        height: 100%;
+                        width: 6px;
+                        left: 0;
+                        top: 0;
+                        transform: rotate(0.5turn);
+                    }
+                }
+
+                h3 {
+                    grid-area: heading;
+                    margin: 0;
+                    text-align: left;
+                }
+
+                p {
+                    grid-area: text;
+                    text-align: left;
+                    width: 270px;
+                }
+
+                .cs-button {
+                    grid-area: button;
+                    margin: 0;
+                    height: 40px;
+                    width: 270px;
+                    justify-self: start;
+                }
+
+                .price-wrapper {
+                    grid-area: price;
+                    text-align: right;
+
+                    .price {
+                        margin: 0;
+                    }
+
+                    .interval {
+                        position: relative;
+                        right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* COMPARISON TABLE SECTION */
 #compare {
     padding: 4em 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 0;
 
     table {
         table-layout: fixed;
@@ -166,9 +281,13 @@
         border-collapse: collapse;
         margin: auto;
 
+        caption {
+            opacity: 0;
+        }
+
         thead {
             border-bottom: 1px solid var(--grey-500);
-            
+
             /* hidden t headings */
             th {
                 width: 10%;
@@ -178,7 +297,7 @@
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 opacity: 0;
-                
+
 
                 /* the features heading */
                 &:nth-of-type(1) {
@@ -199,7 +318,6 @@
                 border-bottom: 1px solid var(--grey-200);
                 padding: 18px 0;
                 width: 85vw;
-                max-width: 700px;
                 row-gap: 15px;
 
                 th {
@@ -208,7 +326,7 @@
                     font-size: 12px;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    
+
                 }
 
                 td {
@@ -266,6 +384,82 @@
                         grid-area: check;
                     }
                 }
+            }
+        }
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 768px) {
+    #compare {
+        padding-top: 50px;
+        padding-bottom: 100px;
+
+        table {
+            max-width: 730px;
+            caption {
+                opacity: 1;
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 4.17px;
+                margin-bottom: 50px;
+            }
+
+            thead {
+
+                tr {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr 1fr 1fr;
+                    grid-template-areas: "features basic pro business";
+
+                    th {
+                        opacity: 1;
+                        width: initial;
+
+                        &:nth-of-type(1) {
+                            width: initial;
+                            grid-area: features;
+                        }
+
+                        &:nth-of-type(2) {
+                            grid-area: basic;
+                            justify-self: center;
+                        }
+
+                        &:nth-of-type(3) {
+                            grid-area: pro;
+                            justify-self: center;
+                        }
+
+                        &:nth-of-type(4) {
+                            grid-area: business;
+                            justify-self: center;
+                        }
+                    }
+
+
+                }
+
+            }
+
+            tbody {
+
+                tr {
+                    grid-template-areas: "heading cell1 cell2 cell3";
+                    grid-template-columns: 2fr 1fr 1fr 1fr;
+                    justify-items: center;
+                    max-width: 730px;
+                    align-items: center;
+
+                    td {
+                        &::before {
+                            display: none;
+                        }
+
+                    }
+                }
+
             }
         }
     }

@@ -2,11 +2,11 @@
 
 /* HERO SECTION*/
 #hero {
-
     display: flex;
     flex-direction: column;
 
     picture {
+
         img {
             width: 100%;
             height: 100%;
@@ -26,17 +26,58 @@
     }
 }
 
+/* tablet styles */
+@media screen and (min-width: 768px) {
+    #hero {
+        flex-direction: row;
+        height: 490px;
+
+        picture {
+            width: 100%;
+            order: 1;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .cs-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 50px;
+            max-width: 610px;
+
+            .color-box {
+                width: 6px;
+                height: 144px;
+                left: 0;
+                top: 173px;
+                transform: rotate(0.5turn);
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 40px;
+            }
+        }
+    }
+
+}
+
 /* FEATURES SECTION */
 #features {
     padding: 4em 28px;
 
     .wrapper {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
         gap: 4em;
 
         .feature {
             text-align: center;
+            max-width: 350px;
 
             img {
                 margin-bottom: 30px;
@@ -44,6 +85,50 @@
 
             p {
                 color: var(--grey-500);
+            }
+        }
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 768px) {
+    #features {
+         padding: 100px 0;
+        .wrapper {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 10px;
+            max-width: 1100px;
+            margin: auto;
+
+
+            .feature {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 20px;
+                width: 340px;
+
+                div {
+                    height: 72px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        margin-bottom: 0;
+                    }
+                }
+                
+                h3 {
+                   margin-top: 30px;
+                   margin-bottom: 0;
+                }
+
+                p {
+                    justify-self: end;
+                    margin: 0;
+                }
             }
         }
     }

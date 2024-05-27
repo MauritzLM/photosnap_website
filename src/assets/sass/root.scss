@@ -7,7 +7,7 @@
 
   --bgColorLight: #fff;
   --bgColorDark: #000;
-  
+
   --grey-100: #F5F5F5;
   --grey-200: #DFDFDF;
   --grey-500: #979797;
@@ -151,8 +151,8 @@ ul {
   width: 100vw;
   padding: 1em;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   z-index: 1000;
   background-color: var(--bgColorLight);
@@ -195,7 +195,8 @@ ul {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    justify-self: end;
   }
 
   .cs-box {
@@ -296,6 +297,55 @@ ul {
   }
 }
 
+/* larger screen nav */
+@media screen and (min-width: 768px) {
+  #cs-navigation {
+    position: relative;
+    padding: 1em 2em;
+    grid-template-columns: 1fr 1.7fr;
+    width: auto;
+
+    .cs-toggle {
+      display: none;
+    }
+
+    .nav-ul-wrapper {
+      position: static;
+      opacity: 1;
+      z-index: 1;
+      transform: scaleX(1);
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      gap: 60px;
+
+      ul {
+        width: fit-content;
+        flex-direction: row;
+        border-bottom: none;
+        padding: 0;
+        gap: 38px;
+
+        li {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .cs-button {
+        width: 158px;
+        // position: absolute;
+        // right: 0;
+      }
+    }
+  }
+
+  #main {
+    padding-top: 0;
+  }
+}
+
 
 
 /* CALL TO ACTION STYLES */
@@ -314,6 +364,27 @@ ul {
   .arrow-link {
     color: var(--textColorLight);
     gap: 18px;
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) {
+  #cta {
+    background-image: url("/assets/images/shared/tablet/bg-beta.jpg");
+    display: flex;
+    justify-content: space-between;
+
+    .color-box {
+      left: 0;
+      height: 100%;
+      width: 6px;
+      transform: rotate(0.5turn);
+    }
+
+    h2 {
+      width: 400px;
+      font-size: 40px;
+    }
+
   }
 }
 
@@ -373,6 +444,34 @@ footer {
     p {
       margin-bottom: 0;
       font-size: 15px;
+      color: var(--grey-500);
+    }
+  }
+}
+
+/* tablet footer */
+@media screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+
+    .site-links {
+      align-items: start;
+
+      .social-links {
+        order: 2;
+        margin-top: 50px;
+      }
+
+      ul {
+        flex-direction: row;
+        order: 1;
+        margin: 0;
+      }
+    }
+
+    .footer-bottom {
+      justify-content: space-between;
+      align-items: end;
     }
   }
 }
