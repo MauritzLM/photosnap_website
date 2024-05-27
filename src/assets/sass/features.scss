@@ -93,7 +93,8 @@
 /* tablet styles */
 @media screen and (min-width: 768px) {
     #features {
-         padding: 100px 0;
+        padding: 100px 0;
+
         .wrapper {
             grid-template-columns: 1fr 1fr;
             column-gap: 10px;
@@ -119,10 +120,10 @@
                         margin-bottom: 0;
                     }
                 }
-                
+
                 h3 {
-                   margin-top: 30px;
-                   margin-bottom: 0;
+                    margin-top: 30px;
+                    margin-bottom: 0;
                 }
 
                 p {
@@ -130,6 +131,14 @@
                     margin: 0;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #features {
+        .wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 }

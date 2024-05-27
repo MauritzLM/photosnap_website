@@ -267,6 +267,57 @@
     }
 }
 
+/* desktop */
+@media screen and (min-width: 1399px) {
+    #pricing-options {
+        .wrapper {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .option {
+                width: 350px;
+                height: auto;
+                display: block;
+
+                &:nth-of-type(2) {
+                    padding: 80px 40px;
+
+                    .color-box {
+                        height: 6px;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        // transform: rotate(0.5turn);
+                    }
+                }
+
+                h3 {
+                    text-align: center;
+                    margin: 1em;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                .price-wrapper {
+                    text-align: center;
+                    margin: 40px 0;
+
+                    .interval {
+                        right: 0;
+                    }
+                }
+
+                .cs-button {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
 /* COMPARISON TABLE SECTION */
 #compare {
     padding: 4em 18px;
@@ -397,6 +448,7 @@
 
         table {
             max-width: 730px;
+
             caption {
                 opacity: 1;
                 font-size: 40px;

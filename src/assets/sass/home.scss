@@ -78,7 +78,6 @@
             }
         }
     }
-
 }
 
 /* SIDE BY SIDE SECTION 1 */
@@ -262,6 +261,13 @@
     }
 }
 
+/* desktop styles */
+@media screen and (min-width: 1300px) {
+    #stories {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
 /* FEATURES SECTION */
 #features {
     padding: 4em 28px;
@@ -281,5 +287,12 @@
         p {
             color: var(--grey-500);
         }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1399px) {
+    #features {
+        flex-direction: row;
     }
 }

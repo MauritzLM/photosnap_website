@@ -159,10 +159,12 @@
 @media screen and (min-width: 768px) {
     #stories {
         grid-template-columns: 1fr 1fr;
+    }
+}
 
-        // .non-featured {
-
-
-        // }
+/* desktop */
+@media screen and (min-width: 1300px) {
+    #stories {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

@@ -366,6 +366,7 @@ ul {
     gap: 18px;
   }
 }
+
 /* tablet */
 @media screen and (min-width: 768px) {
   #cta {
@@ -386,6 +387,14 @@ ul {
     }
 
   }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  #cta {
+    background-image: url("/assets/images/shared/desktop/bg-beta.jpg");
+  }
+
 }
 
 /* FOOTER STYLES */
@@ -472,6 +481,31 @@ footer {
     .footer-bottom {
       justify-content: space-between;
       align-items: end;
+    }
+  }
+}
+
+/* desktop footer */
+@media screen and (min-width: 1399px) {
+  footer {
+    .site-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "logo sitemap"
+        "social sitemap";
+
+      .logo {
+        grid-area: logo;
+      }
+
+      .social-links {
+        grid-area: social;
+      }
+
+      ul {
+        grid-area: sitemap;
+        flex-direction: column;
+      }
     }
   }
 }
