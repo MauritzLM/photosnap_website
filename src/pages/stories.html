@@ -58,7 +58,8 @@ script:  ''
 {% for story in stories %}
    
    {% if story.featured == '' %}
-    <div class="non-featured">
+    <a href="#" class="non-featured">
+      <div class="color-box"></div>
       <picture>
           <!-- Mobile image-->
           <source media="(max-width: 600px)" srcset="/assets/images/stories/mobile/{{ story.imgSrc }}.jpg"/>
@@ -77,7 +78,7 @@ script:  ''
           <span class="arrow-link">Read story <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></span>
       </div>
 
-    </div> 
+    </a> 
 
    {% endif %}
 
