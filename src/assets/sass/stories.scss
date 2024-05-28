@@ -95,6 +95,15 @@
         position: relative;
         color: var(--textColorLight);
 
+        .color-box {
+            display: none;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            top: auto;
+            transform: rotate(0.5turn);
+        }
+
         &::before {
             content: "";
             height: 100%;
@@ -104,6 +113,15 @@
             display: block;
             top: 0;
             right: 0;
+        }
+
+        &:hover {
+            bottom: 30px;
+
+            .color-box {
+                display: block;
+
+            }
         }
 
         picture {
@@ -159,6 +177,10 @@
 @media screen and (min-width: 768px) {
     #stories {
         grid-template-columns: 1fr 1fr;
+
+        .non-featured {
+            height: 500px;
+        }
     }
 }
 

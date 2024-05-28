@@ -62,7 +62,37 @@
             }
         }
     }
+}
 
+/* desktop */
+@media screen and (min-width: 1399px) {
+    #hero {
+        .cs-text {
+            padding: 111.5px;
+        }
+    }
+}
+
+/* desktop - large screens */
+@media screen and (min-width: 1455px) {
+    #hero {
+        picture {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .cs-text {
+            max-width: none;
+            width: 50%;
+
+            p {
+                max-width: 600px;
+            }
+        }
+    }
 }
 
 /* PRICING OPTIONS SECTION */
@@ -126,10 +156,11 @@
     }
 
     .toggle-checkbox:checked+& {
-        background: var(--grey-200);
+        background: var(--bgColorDark);
 
         &:before {
             left: 35px;
+            background-color: var(--bgColorLight);
         }
     }
 
@@ -178,6 +209,11 @@
                 margin: auto;
                 margin-top: 40px;
                 width: 245px;
+
+                &:hover {
+                    background-color: var(--grey-200);
+                    color: var(--textColorDark);
+                }
             }
 
             &:nth-of-type(2) {
@@ -193,6 +229,10 @@
                 .cs-button {
                     background-color: var(--bgColorLight);
                     color: var(--textColorDark);
+
+                    &:hover {
+                        background-color: var(--grey-200);
+                    }
                 }
             }
 
@@ -443,8 +483,8 @@
 /* tablet styles */
 @media screen and (min-width: 768px) {
     #compare {
-        padding-top: 50px;
-        padding-bottom: 100px;
+        padding-top: 100px;
+        padding-bottom: 140px;
 
         table {
             max-width: 730px;
@@ -514,5 +554,13 @@
 
             }
         }
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1399px) {
+    #compare {
+        // padding-top: 120px;
+        padding-bottom: 170px;
     }
 }

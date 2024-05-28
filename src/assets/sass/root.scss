@@ -93,6 +93,11 @@ button {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
+
+  &:hover {
+    background-color: var(--grey-200);
+    color: var(--textColorDark);
+  }
 }
 
 .logo {
@@ -139,6 +144,10 @@ a {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 ul {
@@ -269,7 +278,7 @@ ul {
     ul {
       background-color: var(--bgColorLight);
       list-style: none;
-      width: 100%;
+      width: 310px;
       display: flex;
       flex-direction: column;
       gap: 18px;
@@ -285,6 +294,10 @@ ul {
           font-size: 15px;
           text-transform: uppercase;
           font-weight: 700;
+
+          &:hover {
+            color: var(--grey-500);
+          }
 
         }
       }
@@ -373,6 +386,7 @@ ul {
     background-image: url("/assets/images/shared/tablet/bg-beta.jpg");
     display: flex;
     justify-content: space-between;
+    padding: 64px 39.5px;
 
     .color-box {
       left: 0;
@@ -390,9 +404,10 @@ ul {
 }
 
 /* desktop */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1399px) {
   #cta {
     background-image: url("/assets/images/shared/desktop/bg-beta.jpg");
+    padding: 64px 165px;
   }
 
 }
@@ -401,7 +416,7 @@ ul {
 footer {
   background-color: var(--bgColorDark);
   color: var(--textColorLight);
-  padding: 4em 2em;
+  padding: 56px 2em;
   display: grid;
   grid-template-columns: 1fr;
   gap: 100px;
@@ -416,7 +431,51 @@ footer {
     .social-links {
       display: flex;
       gap: 10px;
+
+      a {
+        &:nth-of-type(1):hover {
+          svg {
+            path {
+              fill: url(#gradient1);
+            }
+          }
+        }
+
+        &:nth-of-type(2):hover {
+          svg {
+            path {
+              fill: url(#gradient2);
+            }
+          }
+        }
+
+        &:nth-of-type(3):hover {
+          svg {
+            path {
+              fill: url(#gradient3);
+            }
+          }
+        }
+
+        &:nth-of-type(4):hover {
+          svg {
+            path {
+              fill: url(#gradient4);
+            }
+          }
+        }
+
+        &:nth-of-type(5):hover {
+          svg {
+            path {
+              fill: url(#gradient5);
+            }
+          }
+        }
+      }
     }
+
+
 
     ul {
       list-style: none;
@@ -433,6 +492,10 @@ footer {
           font-size: 12px;
           font-weight: 700;
           text-transform: uppercase;
+
+          &:hover {
+            color: var(--grey-500);
+          }
         }
       }
     }
@@ -462,6 +525,7 @@ footer {
 @media screen and (min-width: 768px) {
   footer {
     grid-template-columns: 1fr 1fr;
+    padding: 64px 39.5px;
 
     .site-links {
       align-items: start;
@@ -488,8 +552,11 @@ footer {
 /* desktop footer */
 @media screen and (min-width: 1399px) {
   footer {
+    padding: 64px 165px;
+
     .site-links {
       display: grid;
+      column-gap: 0;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "logo sitemap"
         "social sitemap";
@@ -500,11 +567,14 @@ footer {
 
       .social-links {
         grid-area: social;
+        align-self: end;
+        margin-top: 0;
       }
 
       ul {
         grid-area: sitemap;
         flex-direction: column;
+        justify-self: start;
       }
     }
   }
