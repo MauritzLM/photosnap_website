@@ -13,8 +13,6 @@ script:  ''
 
 {# for each story create a component* #}
   
-
-  
 <section id="hero">  
 <!-- loop over stories -->
   {% for story in stories %}
@@ -44,7 +42,7 @@ script:  ''
              <p>{{ story.date }} <span>by {{ story.author }}</span></p>
              <p>{{ story.text }}</p>
 
-             <span class="arrow-link">Read story <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></span>
+             <a href="#" class="arrow-link">Read the story <img src="/assets/images/shared/desktop/arrow-light.svg"/ alt="" aria-hidden="true" decoding="async" width="42" height="12" loading="lazy"></a>
          </div>    
       </div> 
      
