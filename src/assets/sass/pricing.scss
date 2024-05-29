@@ -73,28 +73,6 @@
     }
 }
 
-/* desktop - large screens */
-@media screen and (min-width: 1455px) {
-    #hero {
-        picture {
-            width: 50%;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .cs-text {
-            max-width: none;
-            width: 50%;
-
-            p {
-                max-width: 600px;
-            }
-        }
-    }
-}
-
 /* PRICING OPTIONS SECTION */
 /* toggle */
 .toggle {
@@ -110,7 +88,6 @@
         font-size: 18px;
         font-weight: 700;
         color: var(--grey-500);
-
     }
 
     .toggle-checkbox {
@@ -163,7 +140,6 @@
             background-color: var(--bgColorLight);
         }
     }
-
 }
 
 
@@ -209,6 +185,7 @@
                 margin: auto;
                 margin-top: 40px;
                 width: 245px;
+                line-height: 1;
 
                 &:hover {
                     background-color: var(--grey-200);
@@ -235,8 +212,6 @@
                     }
                 }
             }
-
-
         }
     }
 }
@@ -317,24 +292,29 @@
 
             .option {
                 width: 350px;
-                height: auto;
+                height: 407px;
                 display: block;
 
                 &:nth-of-type(2) {
                     padding: 80px 40px;
+                    height: 470px;
+
+                    h3 {
+                        margin-top: 0;
+                    }
 
                     .color-box {
                         height: 6px;
                         width: 100%;
                         left: 0;
                         top: 0;
-                        // transform: rotate(0.5turn);
                     }
                 }
 
                 h3 {
                     text-align: center;
                     margin: 1em;
+                    margin-top: 10px;
                 }
 
                 p {
@@ -407,7 +387,7 @@
                     "cell1 cell2 cell3";
                 grid-template-columns: 1fr 1fr 1fr;
                 border-bottom: 1px solid var(--grey-200);
-                padding: 18px 0;
+                padding: 25px 0;
                 width: 85vw;
                 row-gap: 15px;
 
@@ -417,7 +397,6 @@
                     font-size: 12px;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-
                 }
 
                 td {
@@ -470,10 +449,9 @@
                     grid-template-areas: "column"
                         "check";
 
-                    &::after {
-                        content: "\2714";
-                        grid-area: check;
-                    }
+                     img {
+                         grid-area: check;
+                     }
                 }
             }
         }
@@ -529,10 +507,7 @@
                             justify-self: center;
                         }
                     }
-
-
                 }
-
             }
 
             tbody {
@@ -545,13 +520,14 @@
                     align-items: center;
 
                     td {
+                        row-gap: 0;
+
                         &::before {
                             display: none;
                         }
 
                     }
                 }
-
             }
         }
     }
@@ -560,7 +536,6 @@
 /* desktop */
 @media screen and (min-width: 1399px) {
     #compare {
-        // padding-top: 120px;
         padding-bottom: 170px;
     }
 }

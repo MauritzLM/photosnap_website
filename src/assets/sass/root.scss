@@ -109,6 +109,7 @@ button {
 h1 {
   text-transform: uppercase;
   font-size: 32px;
+  margin-top: 0;
 }
 
 h1,
@@ -158,7 +159,7 @@ ul {
 /* NAVIGATION STYLES */
 #cs-navigation {
   width: 100vw;
-  padding: 1em;
+  padding: 1em 28px;
   position: fixed;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -172,15 +173,12 @@ ul {
     width: 0%;
     min-height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    // -webkit-backdrop-filter: blur(10px);
-    // backdrop-filter: blur(10px);
     opacity: 0;
     position: absolute;
     display: block;
     top: 100%;
     left: -10px;
     z-index: -11;
-    // transition: width 0.2s, opacity 0.2s;
   }
 
   &.cs-active {
@@ -259,7 +257,6 @@ ul {
 
   .nav-ul-wrapper {
     position: absolute;
-    // height: 100vh;
     background-color: var(--bgColorLight);
     opacity: 0;
     top: 100%;
@@ -314,7 +311,7 @@ ul {
 @media screen and (min-width: 768px) {
   #cs-navigation {
     position: relative;
-    padding: 1em 2em;
+    padding: 1em 40px;
     grid-template-columns: 1fr 1.7fr;
     width: auto;
 
@@ -330,7 +327,7 @@ ul {
       flex-direction: row;
       justify-content: space-between;
       padding: 0;
-      gap: 60px;
+      gap: 50px;
 
       ul {
         width: fit-content;
@@ -348,8 +345,6 @@ ul {
 
       .cs-button {
         width: 158px;
-        // position: absolute;
-        // right: 0;
       }
     }
   }
@@ -359,6 +354,12 @@ ul {
   }
 }
 
+/* desktop nav */
+@media screen and (min-width: 1439px) {
+  #cs-navigation {
+    padding: 1em 150px;
+  }
+}
 
 
 /* CALL TO ACTION STYLES */
@@ -399,7 +400,6 @@ ul {
       width: 400px;
       font-size: 40px;
     }
-
   }
 }
 
@@ -409,7 +409,6 @@ ul {
     background-image: url("/assets/images/shared/desktop/bg-beta.jpg");
     padding: 64px 165px;
   }
-
 }
 
 /* FOOTER STYLES */
@@ -426,11 +425,12 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
 
     .social-links {
       display: flex;
-      gap: 10px;
+      gap: 13.5px;
+      align-items: center;
 
       a {
         &:nth-of-type(1):hover {
@@ -474,8 +474,6 @@ footer {
         }
       }
     }
-
-
 
     ul {
       list-style: none;
@@ -539,6 +537,7 @@ footer {
         flex-direction: row;
         order: 1;
         margin: 0;
+        gap: 26px;
       }
     }
 
@@ -575,6 +574,11 @@ footer {
         grid-area: sitemap;
         flex-direction: column;
         justify-self: start;
+        gap: 19px;
+
+        li {
+          text-align: left;
+        }
       }
     }
   }

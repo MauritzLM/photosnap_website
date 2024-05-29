@@ -20,7 +20,7 @@
         background-color: var(--bgColorDark);
         color: var(--textColorLight);
         position: relative;
-        padding: 4em 28px;
+        padding: 72px 28px;
 
         .color-box {
             position: absolute;
@@ -28,7 +28,6 @@
             width: 128px;
             height: 6px;
             background: linear-gradient(#ffc593 0%, #bc7198 52%, #5a77ff 100%);
-
         }
 
         p {
@@ -81,32 +80,10 @@
 }
 
 /* desktop */
-@media screen and (min-width: 1399px) {
+@media screen and (min-width: 1439px) {
     #hero {
         .cs-text {
             padding: 111.5px;
-        }
-    }
-}
-
-/* desktop - large screens */
-@media screen and (min-width: 1455px) {
-    #hero {
-        picture {
-            width: 50%;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .cs-text {
-            max-width: none;
-            width: 50%;
-
-            p {
-                max-width: 600px;
-            }
         }
     }
 }
@@ -121,7 +98,7 @@
     }
 
     .cs-text {
-        padding: 5em 2em;
+        padding: 72px 28px;
 
         h2 {
             text-transform: uppercase;
@@ -150,6 +127,7 @@
             img {
                 height: 100%;
                 object-fit: cover;
+                min-width: 273px;
             }
         }
 
@@ -157,7 +135,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 50px;
+            padding: 72px 50px;
             max-width: 610px;
 
             h2 {
@@ -168,7 +146,7 @@
 }
 
 /* desktop */
-@media screen and (min-width: 1399px) {
+@media screen and (min-width: 1439px) {
     #sbs-r {
         .cs-text {
             padding: 111.5px;
@@ -208,7 +186,7 @@
     }
 
     .cs-text {
-        padding: 5em 2em;
+        padding: 72px 28px;
 
         h2 {
             text-transform: uppercase;
@@ -246,7 +224,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 50px;
+            padding: 72px 50px;
             max-width: 610px;
 
             h2 {
@@ -257,8 +235,8 @@
 }
 
 /* desktop */
-@media screen and (min-width: 1399px) {
-    #hero {
+@media screen and (min-width: 1439px) {
+    #sbs-l {
         .cs-text {
             padding: 111.5px;
         }
@@ -338,8 +316,8 @@
 
         .cs-text {
             position: absolute;
-            bottom: 10%;
-            left: 10%;
+            bottom: 9%;
+            left: 9%;
             width: 80%;
             letter-spacing: 0;
 
@@ -348,7 +326,7 @@
             }
 
             p {
-                padding-bottom: 1em;
+                padding-bottom: 10px;
                 border-bottom: 1px solid var(--grey-500);
                 font-size: 13px;
                 margin-top: 5px;
@@ -360,7 +338,6 @@
                 letter-spacing: 2px;
             }
         }
-
     }
 }
 
@@ -384,12 +361,11 @@
 
 /* FEATURES SECTION */
 #features {
-    padding: 4em 28px;
-    display: flex;
-    flex-direction: column;
+    padding: 72px 28px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 4em;
-    align-items: center;
-    justify-content: center;
 
     .feature {
         text-align: center;
@@ -405,19 +381,26 @@
     }
 }
 
+/* tablet */
+@media screen and (min-width: 768px) {
+    #features {
+        padding: 130px;
+    }
+}
+
 /* desktop */
 @media screen and (min-width: 1399px) {
     #features {
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
         padding: 165px;
-        gap: 30px;
 
         .feature {
             display: grid;
             grid-template-columns: 1fr;
             justify-items: center;
             gap: 20px;
-            width: 340px;
+            width: 350px;
 
             div {
                 height: 72px;
@@ -440,7 +423,18 @@
                 justify-self: end;
                 margin: 0;
             }
+
+            /* this one has less text so is misaligned */
+            &:nth-of-type(3) {
+                h3 {
+                    margin-top: 18px;
+                }
+
+                p {
+                    position: relative;
+                    bottom: 13px
+                }
+            }
         }
     }
-
 }

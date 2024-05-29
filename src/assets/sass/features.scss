@@ -17,7 +17,7 @@
     .cs-text {
         background-color: var(--bgColorDark);
         color: var(--textColorLight);
-        padding: 4em 28px;
+        padding: 72px 28px;
         position: relative;
 
         p {
@@ -62,36 +62,20 @@
             }
         }
     }
-
 }
-
-/* desktop - larger screens */
-@media screen and (min-width: 1455px) {
-    #hero {
-        picture {
-            width: 50%;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .cs-text {
-            max-width: none;
-            width: 50%;
-            padding: 111.5px;
-
-            p {
-                max-width: 600px;
-            }
-        }
+/* desktop */
+@media screen and (min-width: 1439px) {
+  #hero {
+    .cs-text {
+        padding: 111.5px;
     }
+  }
 }
 
 
 /* FEATURES SECTION */
 #features {
-    padding: 4em 28px;
+    padding: 72px 28px;
 
     .wrapper {
         display: grid;
@@ -166,6 +150,22 @@
         .wrapper {
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 30px;
+
+            .feature {
+                width: 350px;
+
+                /* this one has less text so is misaligned */
+                &:nth-of-type(3) {
+                    h3 {
+                        margin-top: 18px;
+                    }
+
+                    p {
+                        position: relative;
+                        bottom: 13px
+                    }
+                }
+            }
         }
     }
 }
