@@ -18,11 +18,14 @@
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="{{ stylesheet }}">
     <script defer src="/assets/js/nav.js"></script>
-    <script defer src="{{ script }}"></script>
+
+    {% if script != '' %}
+       <script defer src="{{ script }}"></script>
+    {% endif %}
 
     <title>
-    {{ title }}
-      </title>
+      {{ title }}
+    </title>
 
   </head>
 
