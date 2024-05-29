@@ -12,7 +12,7 @@ const prices = {
         '390.00',
         '990.00'
     ]
-}
+};
 
 // if checked = yearly / unchecked = monthly
 // select toggle input(checkbox) / all price elements / all interval elements
@@ -43,5 +43,3 @@ toggle.addEventListener('change', (e) => {
         monthlyLabel.classList.add('cs-active');
     }
 });
-
-
