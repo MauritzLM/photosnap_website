@@ -23,6 +23,11 @@
     <link rel="preload" href="/assets/fonts/dm-sans-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/dm-sans-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
 
+    <!-- Preload image --> 
+    {% if preloadImg != '' %}
+      <link rel="preload" as="image" href="{{ preloadImg }}" />
+    {% endif %}
+
     <!-- stylesheets and scripts -->
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="{{ stylesheet }}">

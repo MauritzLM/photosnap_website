@@ -1,7 +1,7 @@
 ---
 title: 'Photosnap stories'
 description: 'Stories page'
-preloadImg: ''
+preloadImg: '/assets/images/stories/desktop/moon-of-appalacia.jpg'
 permalink: 'stories/'
 eleventyNavigation:
    key: stories
@@ -11,7 +11,7 @@ stylesheet:  /css/stories.css
 script:  ''
 ---
 
-{# for each story create a component* #}
+{# for each story create a component #}
   
 <section id="hero">  
 <!-- loop over stories -->
@@ -32,7 +32,7 @@ script:  ''
              <source media="(min-width: 1440px)" srcset="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg"/>
 
              <!-- Fallback image --> 
-             <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="" height="" loading=""> 
+             <img src="/assets/images/stories/desktop/{{ story.imgSrc }}.jpg" alt="{{ story.imgAlt }}" aria-hidden="true" decoding="async" width="1920" height="1200" loading="eager"> 
          </picture>
  
          <div class="cs-text">   
