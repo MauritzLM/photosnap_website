@@ -27,13 +27,19 @@ Users should be able to:
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements throughout the site
 
-### Screenshot
+### Screenshots
 
+-
 ![mobile nav](/screenshots/nav-mobile.png)
+
 ![mobile table](/screenshots/table-mobile.png)
+
 ![tablet features page](/screenshots/features-tablet.png)
+
 ![tablet pricing cards](/screenshots/pricing-tablet.png)
+
 ![desktop stories page](/screenshots/stories-desktop.png)
+
 ![desktop pricing page](/screenshots/pricing-desktop.png)
 
 ### Links
