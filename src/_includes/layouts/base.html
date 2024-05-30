@@ -25,7 +25,8 @@
 
     <!-- Preload image --> 
     {% if preloadImg != '' %}
-      <link rel="preload" as="image" href="{{ preloadImg }}" />
+      <link rel="preload" as="image" href="{{ preloadImgM }} media="(max-width: 767px)" />
+      <link rel="preload" as="image" href="{{ preloadImg }} media="(min-width: 768px)" />
     {% endif %}
 
     <!-- stylesheets and scripts -->
